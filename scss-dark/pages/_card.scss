@@ -1,0 +1,458 @@
+.Card {
+  &__box {
+    background-color: $bgTertiary;
+    .CardItem {
+      margin-bottom: 24px;
+      &__box {
+        background-color: $bgPrimary;
+        border-radius: 8px;
+        border: 1px solid $linePrimary;
+        &-header {
+          height: 40px;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 16px;
+          align-items: center;
+          p {
+            font-weight: 700;
+          }
+
+          .title {
+            margin: 0;
+            font-size: 14px;
+            line-height: calc(20 / 14);
+            color: $contentPrimary;
+          }
+
+          .button__clearall {
+            border: none;
+            background: none;
+            color: $contentSecondary;
+            font-weight: 500;
+            font-size: 14;
+            line-height: calc(20 / 14);
+          }
+        }
+        &-body {
+          border-top: 1px solid $linePrimary;
+          padding: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          // border-bottom: 1px solid $linePrimary;
+          .CardItem__body-left {
+            .item__left {
+              display: flex;
+              flex: 1;
+              align-items: center;
+              .CardItem__checkbox-custom {
+                margin-right: 14px;
+                position: relative;
+                background-color: transparent;
+                display: block;
+
+                label.CardItem__containerLabel {
+                  display: flex;
+                  justify-content: start;
+                  align-items: center;
+                  position: relative;
+                  padding-left: 0px;
+                  cursor: pointer;
+                  margin-bottom: 0;
+                  user-select: none;
+                  background-color: transparent;
+                }
+                .CardItem__containerLabel .CardItem__text {
+                  padding-left: 30px;
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: calc(20 / 14);
+                  color: $contentSecondary;
+                }
+
+                /* Hide the browser's default checkbox */
+                .CardItem__containerLabel input {
+                  position: absolute;
+                  opacity: 0;
+                  cursor: pointer;
+                  height: 0;
+                  width: 0;
+                }
+
+                /* Create a custom checkbox */
+                .CardItem__checkmark {
+                  top: 0;
+                  left: 0;
+                  height: 22px;
+                  width: 22px;
+                  border-radius: 8px;
+                  background-color: #fff;
+                  /* Light / Funtion / linkPrimary */
+                  border: 2px solid $alwaysLine;
+                  border-radius: 8px;
+                  display: flex;
+                }
+
+                /* On mouse-over, add a grey background color */
+                .CardItem__containerLabel:hover input ~ .CardItem__checkmark {
+                  // background-color: color-theming.$bgAccentSecondary;
+                  // background-color: #fff;
+                }
+
+                /* When the checkbox is checked, add a blue background */
+                .CardItem__containerLabel input:checked ~ .CardItem__checkmark {
+                  background-color: $Brainning;
+                  border-radius: 8px;
+                  border: unset;
+                }
+
+                /* Create the checkmark/indicator (hidden when not checked) */
+                .CardItem__checkmark:after {
+                  content: "";
+                  position: absolute;
+                  display: none;
+                }
+
+                /* Show the checkmark when checked */
+                .CardItem__containerLabel
+                  input:checked
+                  ~ .CardItem__checkmark:after {
+                  display: block;
+                }
+
+                /* Style the checkmark/indicator */
+                .CardItem__containerLabel .CardItem__checkmark:after {
+                  left: 7.5px;
+                  top: 5px;
+                  width: 6px;
+                  height: 10px;
+                  border: solid white;
+                  border-width: 0 3px 3px 0;
+                  -webkit-transform: rotate(45deg);
+                  -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+                }
+              }
+              .image {
+                width: 103px;
+              }
+              .content {
+                margin-left: 12px;
+                .heading {
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: calc(24 / 16);
+                  color: $contentPrimary;
+                  margin: 0;
+                }
+                .price {
+                  display: flex;
+                  align-items: center;
+                  .firt {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: $Brainning;
+                    margin-right: 8px;
+                  }
+                  .last {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: calc(16 / 12);
+                    color: $contentSecondary;
+                    text-decoration-line: line-through;
+                  }
+                }
+              }
+            }
+          }
+          .CardItem__body-right {
+            display: flex;
+            align-items: center;
+            .item__right-change {
+              .btn-secondary {
+                background: none;
+                border-color: $lineSecondary;
+                color: $contentPrimary;
+              }
+              .btn-secondary:nth-child(2) {
+                padding: 0px 20px;
+              }
+            }
+            .item__right-delete {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 14px;
+              border: 1px solid $linePrimary;
+              width: 38px;
+              height: 38px;
+              border-radius: 8px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .Card__info {
+      margin-bottom: 24px;
+      background-color: $bgPrimary;
+      border-radius: 8px;
+      border: 1px solid $linePrimary;
+      &-header {
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: calc(24 / 16);
+        color: $contentPrimary;
+        border-bottom: 1px solid $linePrimary;
+      }
+      &-box {
+        padding: 8px 16px;
+        .form-control-4 {
+          height: 80px;
+        }
+        .form-group {
+          .form-label {
+            color: $contentPrimary;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: calc(20 / 14);
+            span {
+              color: $Brainning;
+              font-size: 12px;
+            }
+          }
+        }
+        .form-group.invalid .form-control {
+          border-color: $Brainning;
+        }
+
+        .form-group.invalid .form-message {
+          color: $Brainning;
+        }
+      }
+    }
+    .Card__payment {
+      &-box {
+        margin-bottom: 24px;
+        border: 1px solid $linePrimary;
+        background-color: $bgPrimary;
+        border-radius: 8px;
+        .payment-header {
+          .heading {
+            padding: 8px 16px;
+            font-weight: 700;
+            color: $contentPrimary;
+            font-size: 16px;
+            line-height: 24px;
+            border-bottom: 1px solid $linePrimary;
+          }
+        }
+        .payment-body {
+          padding: 8px 16px;
+          .payment__input-group {
+            display: flex;
+            justify-content: space-between;
+            .payment__form-control {
+              padding: 12px;
+              border: 1px solid $lineSecondary;
+              width: 75%;
+              font-size: 14px;
+              line-height: calc(20 / 14);
+              font-weight: 500;
+              outline: none;
+            }
+            .payment__btn {
+              padding: 13px;
+              background-color: $accentPrimary;
+              border: none;
+              border-radius: 4px;
+              width: 80px;
+              color: $contentInversePrimary;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: calc(20 / 14);
+            }
+            .payment__btn:hover {
+              opacity: 0.6;
+            }
+          }
+          .payment__desc {
+            border-bottom: 1px solid $linePrimary;
+            padding-bottom: 20px;
+            &-item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px 0;
+              font-size: 14px;
+              line-height: calc(20 / 14);
+              color: $contentPrimary;
+              .title {
+                font-weight: 500;
+              }
+              .quantity {
+                font-weight: 700;
+                text-transform: uppercase;
+              }
+              .quantity--active {
+                color: $Brainning;
+              }
+            }
+          }
+          .payment__bank {
+            padding-top: 20px;
+            border-bottom: 1px solid $linePrimary;
+            .form-check {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                .form-check:focus-within {
+                background: $bgPrimary;
+                  border: 1px solid $Brainning;
+              }
+
+              input[type="radio"] {
+                /* Add if not using autoprefixer */
+                /* Remove most all native input styles */
+                /* For iOS < 15 */
+                appearance: none;
+                /* Not removed via appearance */
+
+                margin: 4px 0 0 0;
+                font: inherit;
+                color: $Brainning;
+                width: 18px;
+                height: 18px;
+                border: 0.15em solid $alwaysLine;
+                border-radius: 50%;
+                transform: translateY(-0.075em);
+
+                display: grid;
+                place-content: center;
+              }
+
+              input[type="radio"]::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                background: $Brainning;
+                /* Windows High Contrast Mode */
+              }
+
+              input[type="radio"]:checked::before {
+                transform: scale(1);
+              }
+
+            //   input[type="radio"]:focus {
+            //     outline: max(2px, 0.15em) solid currentColor;
+            //     outline-offset: max(2px, 0.15em);
+            //   }
+              margin-bottom: 24px;
+              .form-check-label {
+                  margin-left: 10px;
+              }
+              .title {
+                
+                font-weight: 500;
+                font-size: 14px;
+                line-height: calc(20 / 14);
+                color: $contentPrimary;
+                margin-bottom: 4px;
+              }
+              .desc {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: calc(16 / 12);
+                color: $contentSecondary;
+                margin-bottom: 0;
+              }
+              div {
+                img {
+                  width: 32px;
+                  margin-right: 4px;
+                }
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                  margin: 0;
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: calc(16 / 12);
+                  color: $contentSecondary;
+                }
+              }
+            }
+          }
+          .title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: calc(20 / 14);
+            color: $contentPrimary;
+            a {
+              text-decoration: none;
+              color: $Brainning;
+              font-weight: 500;
+            }
+          }
+          .payment__btn1 {
+            height: 56px;
+            width: 100%;
+            border: none;
+            background-color: $Brainning;
+            border-radius: 4px;
+            color: $contentInversePrimary;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: calc(20 / 14);
+            margin-bottom: 24px;
+          }
+          .payment__btn1:hover {
+            opacity: 0.8;
+            transition: 0.3s ease;
+          }
+        }
+      }
+    }
+    @media (max-width: 1199px) {
+      .CardItem {
+        margin-bottom: 24px;
+        &__box {
+          &-body {
+            flex-direction: column;
+            .CardItem__body-left {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+      .Card__payment {
+        &-box {
+          .payment-body {
+            padding: 8px 16px;
+            .payment__input-group {
+              flex-direction: column;
+              .payment__form-control {
+                padding: 12px;
+                border: 1px solid $lineSecondary;
+                width: 100%;
+                font-size: 14px;
+                line-height: calc(20 / 14);
+                font-weight: 500;
+                outline: none;
+                margin-bottom: 4px;
+              }
+              .payment__btn {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

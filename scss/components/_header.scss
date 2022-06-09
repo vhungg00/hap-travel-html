@@ -1,0 +1,385 @@
+.HeaderCustom {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  &__box {
+    &-global {
+      box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+      background-color: $bgPrimary;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .global {
+        &__box {
+          min-height: 64px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          &-logo {
+            .image {
+              position: relative;
+              width: 59px;
+              height: 40px;
+              overflow: hidden;
+              aspect-ratio: 59/40;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+          }
+          &-nav {
+            display: flex;
+            align-items: center;
+            a {
+              &:hover {
+                opacity: 0.8;
+                transition: ease-in .2s;
+              }
+              line-height: 64px;
+              font-size: 14px;
+              font-weight: 500;
+              padding-left: 20px;
+              color: $contentPrimary;
+              &:last-child {
+                text-decoration: none;
+                .box-contact {
+                  width: 139px;
+                  height: 36px;
+                  background-color: $bgButtonSecondary;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: $border-Radius-Secondary;
+                  gap: 8px;
+                  span {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: calc(20/14);
+                    color: $contentInversePrimary;
+                  }
+                }
+              }
+            }
+          }
+          &-toggle {
+            .toggle__btn {
+              cursor: pointer;
+              background-color: $bgSecondary;
+              width: 40px;
+              height: 35px;
+              border: none;
+              padding: 5px 10px;
+              -webkit-border-radius: 3px;
+              -moz-border-radius: 3px;
+              -o-border-radius: 3px;
+              -ms-border-radius: 3px;
+              border-radius: 3px;
+              outline: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              flex-direction: column;
+              svg path {
+                fill: $contentPrimary;
+              }
+            }
+
+            input.toggle__input:checked ~ .toggle__list {
+              left: 0;
+            }
+            input.toggle__input:checked ~ .mark {
+              width: 100%;
+              display: block;
+            }
+
+            .toggle__list {
+              ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+              }
+
+              /* Track */
+              ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 5px;
+              }
+
+              /* Handle */
+              ::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 5px;
+              }
+
+              /* Handle on hover */
+              ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+              }
+
+              background: $alwaysDarkPrimary;
+              display: block !important;
+              width: 314px;
+              height: 100% !important;
+              margin: 0;
+              padding: 16px 0 16px 16px;
+
+              position: fixed;
+              left: -340px;
+              top: 0;
+              z-index: 100;
+              transition: all 0.5s;
+              .list {
+                &__btn-close {
+                  cursor: pointer;
+
+                  i {
+                    color: #fff;
+                  }
+                }
+                &__body {
+                  height: 100%;
+                  overflow: auto;
+                  display: flex;
+                  flex-direction: column;
+
+                  &-header {
+                    padding-right: 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  }
+                }
+              }
+            }
+            .mark {
+              transition: all 0.5s;
+              display: none;
+              position: fixed;
+              width: 0px;
+              background: rgba(0, 0, 0, 0.6);
+              z-index: 99;
+              top: 0;
+              right: 0;
+              height: calc(100vh);
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+
+    &-menu {
+      background-color: rgb(41, 41, 41);
+      width: 100%;
+      position: relative;
+
+      .menu {
+        &__box {
+          // .row {
+          z-index: 3;
+          position: relative;
+          // }
+          &-firstLevel {
+            list-style: none;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 32px;
+            .firstLevel {
+              &__item {
+                margin-right: 40px;
+                a {
+                  text-decoration: none;
+                }
+                .dropdown {
+                  .dropdown-toggle {
+                    box-sizing: border-box;
+                    padding: 6px 16px;
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: $alwaysLightPrimary;
+                    span {
+                      margin-left: 8px;
+                    }
+                    &::after {
+                      display: none;
+                    }
+                  }
+
+                  .dropdown-menu {
+                    padding: 0;
+                    min-width: 240px;
+                    &.show {
+                      transform: translate3d(0px, 30px, 0px) !important;
+                    }
+                    background: $bgPrimary;
+                    /* Light / bg / Tertiary */
+
+                    border: 1px solid $bgTertiary;
+                    box-sizing: border-box;
+                    /* Light / Shadow 1 */
+
+                    box-shadow: 0px 2px 6px $shadow;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    .dropdown-item:not(:last-child) {
+                      border-bottom: 1px solid $lineTertiary;
+                    }
+                    .dropdown-item {
+                      padding: 0;
+                      min-height: 40px;
+                      &:active {
+                        background-color: $Brainning;
+                      }
+                      .content {
+                        display: flex;
+                        padding: 8px 12px;
+                      }
+                      .text {
+                        margin-left: 8px;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 20px;
+                        /* identical to box height, or 143% */
+
+                        /* Light/content/Primary */
+
+                        color: $contentPrimary;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &-hotline {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height, or 133% */
+
+            color: #ffffff;
+            min-height: 32px;
+            display: flex;
+            align-items: center;
+            a {
+              text-decoration: none;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+}
+
+// // Extra large devices (large desktops)
+// // No media query since the extra-large breakpoint has no upper bound on its width
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+  // .topbar {
+  //   &__box {
+  //   }
+  // }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+  .HeaderCustom {
+    &__box {
+      &-global {
+        .global {
+          &__box {
+            min-height: 48px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &-logo {
+              order: 2;
+              width: 41px;
+              margin-left: 12px;
+              // margin-right: 12px;
+              .box-image {
+                width: 41px;
+                height: 41px;
+                margin: auto;
+              }
+            }
+            &-search {
+              // width: calc(80% - 16px);
+              display: none;
+              .form {
+                padding: 0 0 0 8px;
+
+                &__button {
+                  background-color: $Brainning;
+                  width: auto;
+                  height: 32px;
+                  border-radius: 16px;
+                }
+              }
+            }
+            &-info {
+              width: auto;
+              order: 2;
+              display: flex;
+              justify-content: end;
+              align-items: center;
+              margin-left: 8px;
+              .info {
+                &__btnCart {
+                  a {
+                    text-decoration: none;
+                  }
+                  a,
+                  button {
+                    background-color: $Brainning;
+                    height: 100%;
+                    border-radius: 0;
+                    padding: 12px 30px;
+                  }
+                }
+              }
+            }
+            &-toggle {
+              margin-left: 8px;
+              label.toggle__btn {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+}

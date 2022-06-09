@@ -1,0 +1,36 @@
+@import "global";
+@import "color";
+@import "animation";
+@import "variables";
+// components
+
+@import "./components/header";
+@import "./components/bannerSlide";
+@import "./components/footer";
+@import "./components/pagination";
+@import "./components/btnScrollToTop";
+@import "./components/banner";
+@import "./components/tutorial";
+@import "./components/feature";
+@import "./components/pagehero";
+@import "./components/breadcrumbs";
+@import "./components/subscribe";
+@import "./components/reviews";
+@import "./components/backgroundBlog";
+@import "./components/blogItem";
+@import "./components/auth";
+
+@import "./components/question";
+@import "./components/item";
+@import "./components/comment";
+@import "./components/form";
+
+// pages
+@import "./pages/home";
+@import "./pages/pricingPage";
+@import "./pages/productDetailPage";
+@import "./pages/productList";
+@import "./pages/blog";
+@import "./components/blogItem";
+@import "./pages/accountPage";
+@import "./pages/card";

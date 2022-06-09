@@ -1,0 +1,146 @@
+.subscribe {
+  margin: 0px auto 0 auto;
+  padding-bottom: 32px;
+  background-color: $bgTertiary;
+
+  &__banner {
+    position: relative;
+  }
+  .container.subscribe__body {
+    background-color: $bgTertiary;
+  }
+  &__box {
+    border: 1px solid #dedede;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px $shadow;
+    position: relative;
+    margin-top: -142px;
+    z-index: 2;
+    background-color: $bgPrimary;
+  }
+  &__box-line-left {
+    position: absolute;
+    display: block;
+    height: 90%;
+    width: 1px;
+    left: -15px;
+    background-color: $linePrimary;
+  }
+  &__box-line-right {
+    position: absolute;
+    display: block;
+    height: 90%;
+    width: 1px;
+    right: -15px;
+    background-color: $linePrimary;
+  }
+  &__box-main {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-package {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: $contentPrimary;
+    }
+    &-price {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      color: $Brainning;
+    }
+    &-desc {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: $alwaysTertiary;
+    }
+    &-img {
+      width: 80px;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  &__list {
+    border-top: 1px solid $lineTertiary;
+    &-item {
+      margin-left: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 0;
+      color: $contentPrimary;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+
+  &__btn-link {
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    width: 208px;
+    height: 48px;
+    left: 32px;
+    top: 480px;
+    text-decoration: none;
+    color: $Brainning;
+
+    /* Light / bg / Primary */
+
+    background: $bgPrimary;
+    /* Light / Function / Brand */
+
+    border: 1px solid $Brainning;
+    box-sizing: border-box;
+    border-radius: 200px;
+    &:hover {
+      // color: $bgInversePrimary;
+      color: $Brainning;
+      background: $bgInversePrimary;
+    }
+  }
+  &__btn-active {
+    background-color: $Brainning;
+    color: $contentInversePrimary;
+  }
+}
+@media (max-width: 767px) {
+  .subscribe {
+    .BannerSlide2__body {
+      &-title {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    &__box-line-left,
+    &__box-line-right {
+      display: none;
+    }
+  }
+}
+// @media (max-width: 1199px) {
+//   .subscribe {
+//     &__btn-link {
+//       width: 180px;
+//       height: 40px;
+//     }
+//   }
+// }

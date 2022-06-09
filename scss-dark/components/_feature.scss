@@ -1,0 +1,25 @@
+.feature {
+  &__box {
+    background-color: $bgPrimary;
+    &-item {
+      margin: 35px 0 32px 0;
+      .item__body {
+        margin-top: 15px;
+        &-heading {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: $contentPrimary;
+        }
+        &-desc {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          color: $contentSecondary;
+        }
+      }
+    }
+  }
+}

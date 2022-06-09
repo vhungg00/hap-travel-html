@@ -1,0 +1,63 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  &__info {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Light/content/Primary */
+
+    color: $contentPrimary;
+    margin-right: 8px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item,
+  .next,
+  .prev {
+    &.active {
+      a {
+        background: $bgTertiary;
+        color: $Brainning;
+        border: 1px solid $Brainning;
+        border-radius: 4px;
+      }
+    }
+    a {
+      height: 35px;
+      min-width: 35px;
+      border-radius: 5px;
+      text-align: center;
+      color: $contentPrimary;
+      font-size: 16px;
+      font-weight: 500;
+      border: 1px solid $lineTertiary;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      svg path {
+        fill: $contentPrimary;
+      }
+      i {
+        font-size: 16px;
+      }
+    }
+    &:hover {
+      a {
+        background: $bgTertiary;
+        color: $Brainning;
+        border: 1px solid $Brainning;
+      }
+    }
+  }
+  .prev,
+  &__item {
+    margin-right: 10px;
+  }
+}

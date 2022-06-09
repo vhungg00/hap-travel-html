@@ -1,0 +1,49 @@
+.CustomVoucher {
+    &-container {
+        padding: 68px 0;
+        .heading {
+            text-align: center;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: calc(48/40);
+            color: $contentPrimary;
+            margin-bottom: 16px;
+        }
+        .description {
+            text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: calc(28/20);
+            color: $contentPrimary;
+            margin-bottom: 48px;
+        }
+        .mt {
+            margin-top: 50px !important;
+        }
+    }
+}
+.CustomNewsTravel,
+.CustomPromotion {
+    padding: 50px 0;
+    &-container {
+        .container__Travel,
+        .container__promotion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            h3 {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: calc(48/40);
+                color: $contentPrimary;
+            }
+            a {
+                color: $contentTertiary;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: calc(24/16);
+            }
+        }
+    }
+}

@@ -1,0 +1,554 @@
+.AccountPage {
+  padding-bottom: 36px;
+  background-color: $bgTertiary;
+  &__title {
+    padding: 0 20px;
+  }
+
+  &__body {
+    margin-top: 16px;
+    &-header {
+      padding: 0 12px;
+      border: 1px solid $contentTertiary;
+      border-radius: 4px;
+      overflow: hidden;
+      &-title {
+        padding: 12px 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 100%;
+        /* identical to box height, or 24px */
+
+        display: flex;
+        align-items: center;
+
+        /* Neutrals/Mine Shaft (Gray 1) */
+
+        color: $contentPrimary;
+      }
+    }
+    .nav.nav-tabs {
+      border: unset;
+      display: flex;
+      flex-direction: column;
+
+      .nav-header {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 100%;
+        /* identical to box height, or 24px */
+
+        /* Neutrals/Mine Shaft (Gray 1) */
+
+        color: $contentPrimary;
+        margin-bottom: 24px;
+      }
+
+      .nav-item {
+        border: unset;
+        &:not(:last-child) {
+          border-bottom: 1px solid $contentTertiary;
+        }
+
+        .nav-link {
+          padding: 12px 0;
+          margin: 0;
+          border: unset;
+
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          /* Light/content/Primary */
+
+          color: $contentPrimary;
+
+          display: flex;
+          align-items: center;
+
+          background: $bgTertiary;
+          &.active {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            /* Light / Funtion / Brand */
+
+            color: $Brainning;
+          }
+        }
+      }
+    }
+    .tab-content {
+      .AccountTabContent {
+        &__info {
+          background: $bgPrimary;
+          /* Light/line/Primary */
+
+          border: 1px solid $linePrimary;
+          border-radius: 8px;
+
+          &-content {
+            padding: 8px 24px 24px;
+          }
+          .content {
+            &__image {
+              .image {
+                position: relative;
+                width: 100%;
+                padding-top: 100%;
+                overflow: hidden;
+                aspect-ratio: 100/100;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  object-fit: cover;
+                  object-position: center;
+                }
+              }
+              .name {
+                margin-top: 12px;
+                display: flex;
+                justify-content: center;
+                span {
+                  background: rgba(20, 33, 65, 0.06);
+                  padding: 8px 12px;
+                  text-align: center;
+                  box-sizing: border-box;
+                  border-radius: 100px;
+                }
+              }
+            }
+            &__form {
+              &-item {
+                .label {
+                  span {
+                    color: $Brainning;
+                    font-size: 16px;
+                  }
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 20px;
+                  padding-bottom: 4px;
+                  /* identical to box height, or 143% */
+
+                  /* Light/content/Primary */
+
+                  color: $contentPrimary;
+                }
+
+                .input {
+                  input {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    /* identical to box height, or 143% */
+
+                    /* Light/content/Secondary */
+
+                    color: $contentSecondary;
+                    height: 48px;
+                  }
+                }
+                .note {
+                  padding-top: 8px;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 16px;
+                  /* identical to box height, or 133% */
+
+                  /* Light/content/Secondary */
+
+                  color: $contentSecondary;
+                }
+              }
+            }
+          }
+        }
+        &__changePassword {
+          background: $bgPrimary;
+          /* Light/line/Primary */
+
+          border: 1px solid $linePrimary;
+          border-radius: 8px;
+          &-content {
+            padding: 24px;
+            .content__form-item {
+              padding-top: 16px;
+              .label {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                /* identical to box height, or 143% */
+
+                /* Light/content/Primary */
+
+                color: $contentPrimary;
+                padding-bottom: 4px;
+
+                span {
+                  color: $Brainning;
+                  font-size: 16px;
+                }
+              }
+
+              .input {
+                input {
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 20px;
+                  /* identical to box height, or 143% */
+
+                  /* Light/content/Secondary */
+
+                  color: $contentSecondary;
+                  height: 48px;
+                }
+              }
+            }
+          }
+        }
+
+        &__header {
+          /* Light / bg / Primary */
+
+          box-sizing: border-box;
+          /* Light/line/Primary */
+          padding: 14px 24px;
+
+          padding-bottom: 10px;
+          border-bottom: 1px solid $linePrimary;
+
+          &-label {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+          }
+          &-btn {
+            button {
+              /* Light / Funtion / Brand */
+
+              background: $Brainning;
+              border-radius: 4px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              /* identical to box height, or 143% */
+
+              text-align: center;
+
+              /* Light / Funtion / alwaysLightPrimary */
+
+              color: $alwaysLightPrimary;
+              padding: 8px 30px;
+              outline: none;
+              box-shadow: none;
+              border: none;
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+
+      .OrderTabContent {
+        background: $bgPrimary;
+        /* Light/line/Primary */
+
+        border: 1px solid $linePrimary;
+        border-radius: 8px;
+        &__header {
+          /* Light / bg / Primary */
+
+          box-sizing: border-box;
+          /* Light/line/Primary */
+          padding: 14px 24px;
+
+          padding-bottom: 10px;
+          border-bottom: 1px solid $linePrimary;
+
+          &-label {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+          }
+          &-btn {
+            button {
+              /* Light / Funtion / Brand */
+
+              background: $Brainning;
+              border-radius: 4px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              /* identical to box height, or 143% */
+
+              text-align: center;
+
+              /* Light / Funtion / alwaysLightPrimary */
+
+              color: $alwaysLightPrimary;
+              padding: 8px 30px;
+              outline: none;
+              box-shadow: none;
+              border: none;
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+
+        &__content {
+          padding: 24px 24px 12px;
+          ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 5px;
+          }
+
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+          }
+
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+          }
+
+          &-box {
+            padding-bottom: 12px;
+            overflow-x: auto;
+            position: relative;
+          }
+          table {
+            border: none;
+            min-width: 600px;
+            width: 100%;
+          }
+          th {
+            /* Light / line / Tertiary */
+
+            border-bottom: 1px solid $lineTertiary;
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height, or 133% */
+
+            /* Light/content/Secondary */
+
+            color: $contentSecondary;
+            padding: 8px;
+          }
+          td {
+            border-bottom: 1px solid $lineTertiary;
+            padding: 12px 8px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+            &.action {
+              a,
+              button {
+                text-decoration: none;
+                outline: none;
+                border: none;
+                box-shadow: none;
+
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+                /* Light / Funtion / alwaysLightPrimary */
+
+                color: $alwaysLightPrimary;
+                background: $accentPrimary;
+                border-radius: 4px;
+                padding: 6px 27px;
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+
+          td,
+          th {
+            text-align: left;
+          }
+        }
+        .content {
+        }
+      }
+
+      .AddressTabContent {
+        &__box {
+          background: $bgPrimary;
+          /* Light/line/Primary */
+
+          border: 1px solid $linePrimary;
+          border-radius: 8px;
+
+          &-content {
+            padding: 24px;
+            .content__form-note {
+              .text {
+                background: rgba(27, 27, 27, 0.8);
+                border-radius: 4px;
+                padding: 8px 12px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                /* identical to box height, or 143% */
+
+                /* Light / Funtion / alwaysLightPrimary */
+
+                color: $alwaysLightPrimary;
+              }
+            }
+
+            .content__form-item {
+              padding-top: 16px;
+              .label {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                /* identical to box height, or 143% */
+
+                /* Light/content/Primary */
+
+                color: $contentPrimary;
+                padding-bottom: 4px;
+
+                span {
+                  color: $Brainning;
+                  font-size: 16px;
+                }
+              }
+
+              .input {
+                input {
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 20px;
+                  /* identical to box height, or 143% */
+
+                  /* Light/content/Secondary */
+
+                  color: $contentSecondary;
+                  heightcontent: 48px;
+                }
+
+                textarea {
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 20px;
+                  /* identical to box height, or 143% */
+
+                  /* Light/content/Secondary */
+
+                  color: $contentSecondary;
+                }
+              }
+            }
+          }
+        }
+
+        &__header {
+          /* Light / bg / Primary */
+
+          box-sizing: border-box;
+          /* Light/line/Primary */
+          padding: 14px 24px;
+
+          padding-bottom: 10px;
+          border-bottom: 1px solid $linePrimary;
+
+          &-label {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+          }
+          &-btn {
+            button {
+              /* Light / Funtion / Brand */
+
+              background: $Brainning;
+              border-radius: 4px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              /* identical to box height, or 143% */
+
+              text-align: center;
+
+              /* Light / Funtion / alwaysLightPrimary */
+
+              color: $alwaysLightPrimary;
+              padding: 8px 30px;
+              outline: none;
+              box-shadow: none;
+              border: none;
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

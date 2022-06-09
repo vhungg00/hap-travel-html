@@ -1,0 +1,632 @@
+.checkbox-custom-1 {
+  position: relative;
+  background-color: transparent;
+  display: block;
+
+  label.containerLabel {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    padding-left: 0px;
+    cursor: pointer;
+    margin-bottom: 0;
+    user-select: none;
+    background-color: transparent;
+  }
+  .containerLabel .text {
+    padding-left: 30px;
+  }
+
+  /* Hide the browser's default checkbox */
+  .containerLabel input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    border-radius: 8px;
+    background-color: #fff;
+    /* Light / Funtion / linkPrimary */
+    border: 2px solid $alwaysLine;
+    border-radius: 8px;
+    display: flex;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .containerLabel:hover input ~ .checkmark {
+    // background-color: color-theming.$bgAccentSecondary;
+    // background-color: #fff;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .containerLabel input:checked ~ .checkmark {
+    background-color: $Brainning;
+    border-radius: 8px;
+    border: unset;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .containerLabel input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .containerLabel .checkmark:after {
+    left: 7.5px;
+    top: 5px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+.ReviewForm {
+  padding: 16px 0 40px 0;
+  &__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Light/content/Primary */
+
+    color: $contentPrimary;
+  }
+  &__rate {
+    &-text {
+      margin-top: 14px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 143% */
+
+      /* Light/content/Secondary */
+
+      color: $contentSecondary;
+    }
+    &-list {
+      margin-top: 14px;
+
+      .container {
+        position: relative;
+
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .container .edit:hover {
+        text-decoration: underline;
+      }
+      .container .star-widget input {
+        display: none;
+      }
+      .star-widget label {
+        color: #444;
+        padding: 0 4px;
+        float: right;
+        transition: all 0.2s ease;
+      }
+      // input:not(:checked) ~ label:hover,
+      // input:not(:checked) ~ label:hover ~ label {
+      //   color: #FFCE39
+      // }
+      input:not(:checked) ~ label:hover svg path,
+      input:not(:checked) ~ label:hover ~ label svg path {
+        fill: #ffce39;
+      }
+
+      input:checked ~ label svg path {
+        fill: #ffce39;
+      }
+      input#rate-5:checked ~ label {
+        color: #ffce39;
+      }
+    }
+  }
+  &__form {
+    margin-top: 14px;
+    &-textarea {
+      textarea {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+
+        /* Light/content/Secondary */
+        background-color: $bgPrimary;
+        color: $contentPrimary;
+        &:focus {
+          color: $contentPrimary;
+          background-color: $bgPrimary;
+        }
+      }
+    }
+
+    &-input {
+      margin-top: 14px;
+      input {
+        background-color: $bgPrimary;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+
+        /* Light/content/Secondary */
+
+        color: $contentPrimary;
+        padding: 12px 14px;
+        height: 48px;
+        &:focus {
+          color: $contentPrimary;
+          background-color: $bgPrimary;
+        }
+      }
+    }
+    &-checkbox {
+      margin-top: 14px;
+      .checkbox-custom-1 .containerLabel .text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+
+        /* Light/content/Secondary */
+
+        color: $contentSecondary;
+      }
+    }
+
+    &-btn {
+      margin-top: 14px;
+      button {
+        background: $Brainning;
+        border-radius: 4px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+
+        /* Light / Funtion / alwaysLightPrimary */
+
+        color: $alwaysLightPrimary;
+      }
+      &:hover {
+        opacity: 0.8;
+        button {
+          color: $alwaysLightPrimary;
+        }
+      }
+    }
+  }
+}
+
+.quantity-custom {
+  display: block;
+  // background-color: aquamarine;
+
+  .groupOne {
+    border-radius: 8px;
+    width: 126px;
+    height: 44px;
+    display: flex;
+    border: 1px solid $contentTertiary;
+    align-items: center;
+    justify-content: space-between;
+    .btn-plus {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      // padding: 12px 20px 12px 0;
+      padding-right: 20px;
+      &:hover {
+        opacity: 0.8;
+      }
+      svg path {
+        fill: $contentSecondary;
+      }
+    }
+    .value {
+      color: $contentPrimary;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.5px;
+      height: 100%;
+    }
+    .btn-minus {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      // padding: 12px 0 12px 20px;
+      padding-left: 20px;
+      &:hover {
+        opacity: 0.8;
+      }
+      svg path {
+        fill: $contentSecondary;
+      }
+    }
+  }
+}
+.CateProducts {
+  background: $bgSecondary;
+  border: 1px solid $contentTertiary;
+  box-sizing: border-box;
+  border-radius: 4px;
+  &__header {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Light/content/Secondary */
+
+    color: $contentSecondary;
+    padding: 10px 12px;
+    border-bottom: 1px solid $contentTertiary;
+  }
+  &__body {
+    .accordion {
+      .card:not(:last-child) {
+        border-bottom: 1px solid $contentTertiary;
+      }
+      .card {
+        border: unset;
+      }
+      .card-header {
+        border: unset;
+        padding: 12px;
+
+        button {
+          border: unset;
+          box-shadow: none;
+          outline: none;
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+          align-items: center;
+
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          /* Light/content/Primary */
+
+          color: $Brainning;
+          .card-header-icon {
+            .right,
+            .down {
+              svg path {
+                fill: $Brainning;
+              }
+            }
+          }
+          &.collapsed {
+            color: $contentPrimary;
+            .card-header {
+              &-icon {
+                transition: all 0.2s;
+                margin-left: 8px;
+                display: flex;
+                align-items: center;
+                .right,
+                .down {
+                  svg path {
+                    fill: $contentPrimary;
+                  }
+                }
+                .right {
+                  display: none;
+                }
+                .down {
+                  display: flex;
+                }
+              }
+            }
+          }
+        }
+        &-icon {
+          margin-left: 8px;
+          display: flex;
+          align-items: center;
+          transition: all 0.2s;
+          .right {
+            display: flex;
+          }
+          .down {
+            display: none;
+          }
+        }
+        &:hover {
+          background: $bgPrimary;
+        }
+      }
+      .card-body {
+        padding: 0;
+        background: $bgTertiary;
+        .CateProducts__body {
+          &-lvl2 {
+            .lvl2-link.active a {
+              color: $Brainning;
+            }
+            .lvl2-link {
+              padding: 8px 24px;
+              &:hover {
+                background: $bgPrimary;
+              }
+            }
+            a {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              /* identical to box height, or 143% */
+
+              /* Light/content/Primary */
+
+              color: $contentPrimary;
+
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.PriceProducts {
+  background: $bgTertiary;
+  border: 1px solid $contentTertiary;
+  box-sizing: border-box;
+  border-radius: 4px;
+  &__header {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Light/content/Secondary */
+
+    color: $contentSecondary;
+    padding: 10px 12px;
+    border-bottom: 1px solid $contentTertiary;
+  }
+  &__body {
+  }
+}
+.form-double-range-slider {
+  // width: calc(100vmin - 40px);
+  width: 100%;
+  height: auto;
+  background: transparent;
+  position: relative;
+  padding: 24px 10px;
+  .box {
+    position: relative;
+    // background-color: wheat;
+    height: auto;
+    width: 100%;
+    input[type="range"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 100%;
+      outline: none;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      background-color: transparent;
+      pointer-events: none;
+    }
+    .slider-track {
+      width: 100%;
+      height: 10px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      border-radius: 5px;
+      border: 1px solid $linePrimary;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 5px;
+    }
+    input[type="range"]::-moz-range-track {
+      -moz-appearance: none;
+      height: 5px;
+    }
+    input[type="range"]::-ms-track {
+      appearance: none;
+      height: 5px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 1.5em;
+      width: 1.5em;
+      background-color: $Brainning;
+      cursor: pointer;
+      margin-top: -9px;
+      pointer-events: auto;
+      border-radius: 50%;
+      border: 3px solid $lineTertiary;
+    }
+    input[type="range"]::-moz-range-thumb {
+      -webkit-appearance: none;
+      height: 1.5em;
+      width: 1.5em;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: $Brainning;
+      border: 3px solid $lineTertiary;
+      pointer-events: auto;
+    }
+    input[type="range"]::-ms-thumb {
+      appearance: none;
+      height: 1.5em;
+      width: 1.5em;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: $Brainning;
+      pointer-events: auto;
+    }
+    input[type="range"]:active::-webkit-slider-thumb {
+      background-color: $Brainning;
+      border: 1px solid $lineTertiary;
+    }
+  }
+  .values {
+    &__box {
+      display: flex;
+      padding: 24px 0 0 0;
+      align-items: center;
+      &-text {
+        margin-right: 8px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        /* Light/content/Secondary */
+
+        color: $contentSecondary;
+      }
+      &-item {
+        margin-right: 8px;
+      }
+      .dash {
+        margin: 0 8px 0 0;
+      }
+      &-btn {
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          /* Light / Funtion / alwaysLightPrimary */
+
+          color: #ffffff;
+          background: $informativePrimary;
+        }
+      }
+    }
+  }
+}
+
+.custom-input-select-2 {
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  // height: 67px;
+  display: flex;
+  flex-direction: column;
+  input {
+    outline: none;
+  }
+  .dropdown {
+    position: relative;
+    button.dropdown-toggle {
+      background: $bgPrimary;
+      border: 1px solid $contentTertiary;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      -webkit-appearance: none;
+      display: flex;
+
+      .text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+
+        color: $contentPrimary;
+      }
+      .icon {
+        margin-left: 16px;
+      }
+      &::after {
+        display: none;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.1rem rgb(0 123 255 / 25%);
+      }
+    }
+    .dropdown-menu {
+      // width: ;
+      background: $bgPrimary;
+      border: 1px solid $contentTertiary;
+      padding: 4px 0;
+      margin: 0;
+      margin-top: 3px;
+      .dropdown-item {
+        white-space: normal;
+        padding: 12px 15px;
+        width: 100%;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        color: $contentPrimary;
+        cursor: pointer;
+        &.active,
+        &:hover {
+          color: $Brainning;
+          background-color: rgba($color: $bgPrimary, $alpha: 0.1);
+        }
+      }
+    }
+  }
+
+  //   height: 67px;
+}

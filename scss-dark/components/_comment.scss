@@ -1,0 +1,255 @@
+.CommentCustom {
+  &__item {
+    padding: 16px 0;
+    border-top: 1px solid $contentTertiary;
+    &-avatar {
+      position: relative;
+      max-width: 60px;
+      .image {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        overflow: hidden;
+        aspect-ratio: 100/100;
+        border-radius: 50%;
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    &-body {
+      .rate {
+        &__star {
+          &.active {
+            svg path {
+              fill: #ffce39;
+            }
+          }
+        }
+      }
+      .info {
+        &__name {
+          margin-top: 4px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* Light/content/Primary */
+
+          color: $contentPrimary;
+        }
+        &__time {
+          margin-top: 4px;
+
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          /* Light/content/Secondary */
+
+          color: $contentSecondary;
+        }
+      }
+    }
+    &-empty {
+      max-width: 60px;
+    }
+    &-desc {
+      margin-top: 7px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+
+      /* Light/content/Secondary */
+
+      color: $contentSecondary;
+    }
+  }
+}
+
+.CommentBox {
+  background-color: $bgPrimary;
+  border-radius: 8px;
+  &__header {
+    .nav-tabs {
+      padding-bottom: 1px;
+      border-bottom: 1px solid $contentTertiary;
+      .nav-item {
+        margin-top: 1px;
+
+        .nav-link {
+          text-decoration: none;
+          border: unset;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          /* Light/content/Secondary */
+
+          color: $contentSecondary;
+          padding: 10px 22px;
+
+          background-color: $bgPrimary;
+          &.active {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $Brainning;
+            border-bottom: 2px solid $Brainning;
+            background-color: $bgPrimary;
+          }
+        }
+      }
+    }
+  }
+  &__body {
+    .InformationTabContent {
+      padding: 16px 24px;
+      color: $contentPrimary;
+      * {
+        color: $contentPrimary;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .CommentTabContent {
+      padding: 16px 24px;
+
+      &__label {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+
+        /* Light/content/Primary */
+        color: $contentPrimary;
+      }
+      &__totalRate {
+        display: flex;
+        margin-top: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+        &-item {
+          margin-right: 4px;
+
+          display: flex;
+          align-items: center;
+          &:nth-child(5) {
+            margin-right: 8px;
+          }
+
+          &.active {
+            svg path {
+              fill: #ffce39;
+            }
+          }
+        }
+        &-text {
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: $contentSecondary;
+        }
+      }
+      &__statistical {
+        display: flex;
+        flex-wrap: wrap;
+        &-item {
+          display: flex;
+          align-items: center;
+          background: $bgSecondary;
+          border-radius: 12px;
+          padding: 8px;
+          margin-top: 12px;
+          &:not(:last-child) {
+            margin-right: 12px;
+          }
+          .icon {
+            display: flex;
+            align-items: center;
+            margin-right: 4px;
+          }
+          .text {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height, or 133% */
+
+            /* Light/content/Secondary */
+
+            color: $contentSecondary;
+            display: flex;
+            align-items: center;
+            transform: translateY(2px);
+          }
+        }
+      }
+      &__body {
+        margin-top: 16px;
+        /* Light/content/Tertiary */
+
+        border-bottom: 1px solid $contentTertiary;
+      }
+      &__showmore {
+        a {
+          text-decoration: none;
+          margin-top: 12px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          /* Light / Funtion / Brand */
+
+          color: $Brainning;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      .ReviewForm {
+        padding: 16px 0 16px 0;
+      }
+    }
+    .FaqTabContent {
+      padding: 16px 24px;
+      .question {
+        &__box {
+          background: $bgPrimary;
+          padding: 20px 0;
+
+          .card-header {
+            padding-left: 0;
+            padding-right: 0;
+            button {
+              padding-left: 0;
+              padding-right: 0;
+            }
+          }
+          .card-body {
+          }
+        }
+      }
+    }
+  }
+}

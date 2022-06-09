@@ -1,0 +1,246 @@
+
+.auth.open {
+        display: flex !important;
+}
+.auth {
+    display: none;
+    position: fixed;
+    background-color: $scrimPrimary;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    min-height: 576px;
+    &__container {
+        background-color: $bgPrimary;
+        width: 500px;
+        min-height: 200px;
+        max-width: calc(100% - 16px);
+        border-radius: 8px;
+        box-shadow: 0 0 10px $shadow;
+        animation: authMove ease 0.3s;
+        &-header {
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $linePrimary;
+            .title {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: calc(24 / 16);
+                color: $contentPrimary;
+                margin: 0;
+            }
+            .close {
+                color: $alwaysTertiary;
+                cursor: pointer;
+                display: block;
+            }
+            &-footer {
+                margin-top: 48px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &-footer {
+            padding: 16px 24px;
+            display: flex;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: calc(20/14);
+            color: $contentPrimary;
+            a {
+                margin-left: 4px;
+                color: $Brainning;
+                font-weight: 700;
+                text-decoration: none;
+
+            }
+        }
+        &-body {
+            padding: 0 24px;
+            .form-group {
+                display: flex;
+                margin-top: 16px;
+                flex-direction: column;
+                .form-label {
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                    line-height: calc(20 / 14);
+                    font-size: 14px;
+                    color: $contentPrimary;
+                    
+                }
+                .form-control {
+                    width: 100%;
+                    padding: 12px 14px;
+                    border: 1px solid $lineSecondary;
+                    border-radius: 4px;
+                    outline: none;
+                    font-size: 14px;
+                    box-shadow: none;
+                    height: 48px;
+                }
+                
+            }
+            .form-group.invalid .form-control {
+                border-color: $Brainning;
+              }
+              
+              .form-group.invalid .form-message {
+                color: $Brainning;
+              }
+            .button__submit, .button__facebook, .button__google {
+                margin-top: 16px;
+                width: 100%;
+                align-items: center;
+                height: 48px;
+                background: $Brainning;
+                border-radius: 4px;
+                color: $contentInversePrimary;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: calc(24/16);
+                border: none;
+                span {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: calc(24/16);
+                margin-left: 6px;
+                }
+            }
+            .button__submit:hover {
+                opacity: 0.8;
+            }
+            .button__facebook:hover {
+                opacity: 0.8;
+            }
+            .button__google:hover {
+                opacity: 0.8;
+            }
+            .button__facebook{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $bgButtonFacebook;
+                margin-top: 0;
+            }
+            .button__google{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $bgButtonGoogle;
+            }
+            .auth__desc {
+                padding: 16px 0;
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: calc(20/14);
+                color: $contentSecondary;
+            }
+        }
+        .auth__form-help {
+            display: flex;
+            justify-content: space-between;
+            a {
+                text-decoration: none;
+                color: $accentPrimary;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: calc(20/14);
+            }
+            .auth__checkbox-custom {
+                position: relative;
+                background-color: transparent;
+                display: block;
+
+                label.auth__containerLabel {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    position: relative;
+                    padding-left: 0px;
+                    cursor: pointer;
+                    margin-bottom: 0;
+                    user-select: none;
+                    background-color: transparent;
+                }
+                .auth__containerLabel .auth__text {
+                    padding-left: 30px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: calc(20/14);
+                    color: $contentSecondary;
+                }
+
+                /* Hide the browser's default checkbox */
+                .auth__containerLabel input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+                /* Create a custom checkbox */
+                .auth__checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 22px;
+                    width: 22px;
+                    border-radius: 8px;
+                    background-color: #fff;
+                    /* Light / Funtion / linkPrimary */
+                    border: 2px solid $alwaysLine;
+                    border-radius: 8px;
+                    display: flex;
+                }
+
+                /* On mouse-over, add a grey background color */
+                .auth__containerLabel:hover input ~ .auth__checkmark {
+                    // background-color: color-theming.$bgAccentSecondary;
+                    // background-color: #fff;
+                }
+
+                /* When the checkbox is checked, add a blue background */
+                .auth__containerLabel input:checked ~ .auth__checkmark {
+                    background-color: $linkPrimary;
+                    border-radius: 8px;
+                    border: unset;
+                }
+
+                /* Create the checkmark/indicator (hidden when not checked) */
+                .auth__checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+
+                /* Show the checkmark when checked */
+                .auth__containerLabel input:checked ~ .auth__checkmark:after {
+                    display: block;
+                }
+
+                /* Style the checkmark/indicator */
+                .auth__containerLabel .auth__checkmark:after {
+                    left: 7.5px;
+                    top: 5px;
+                    width: 6px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}

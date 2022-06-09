@@ -1,0 +1,13 @@
+@import "global";
+@import "color";
+@import "animation";
+@import "variables";
+// components
+
+@import "./components/header";
+@import "./components/homeItem.scss";
+@import "./components/footer";
+
+
+// pages
+@import "./pages/home";

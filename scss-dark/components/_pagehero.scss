@@ -1,0 +1,16 @@
+.pagehero {
+  // margin: 8px 0 28px 0;
+
+  &__section {
+    a {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: none;
+      color: $contentSecondary;
+      .section--active:last-child {
+        color: $contentPrimary;
+      }
+    }
+  }
+}

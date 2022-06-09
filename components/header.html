@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./../vendor/bootstrap-4.6.1/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="./../vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./../vendor/slick/slick-theme.css" />
+
+  <!-- jquery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+
+  <link rel="stylesheet" href="./../css/app.css" />
+
+  <!-- icon -->
+  <link rel="stylesheet" href="./../vendor/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="./../lib/animate/animate.min.css" rel="stylesheet">
+  <link href="./../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="./../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- content -->
+  <header class="HeaderCustom" id="HeaderCustom">
+    <!--  -->
+    <div class="HeaderCustom__box">
+      <!--  -->
+      <div class="HeaderCustom__box-global">
+        <!--  -->
+        <div class="global__box container">
+          <div class="global__box-logo mr-auto">
+            <a href="">
+                <div class="image">
+                  <img srcset="../images/logo.png 2x" alt="" />
+                </div>
+            </a>
+          </div>
+          <nav class="global__box-nav ml-auto d-none d-md-flex">
+              <a href="" class="nav_link">Trang chủ</a>
+              <a href="" class="nav_link">Thẻ du lịch dài hạn</a>
+              <a href="" class="nav_link">Thẻ du lịch dài hạn</a>
+              <a href="" class="nav_link">Voucher du lịch</a>
+              <a href="" class="nav_link">Vé máy bay</a>
+              <a href="" class="nav_link">Khách sạn</a>
+              <a href="" class="nav_link">Liên hệ</a>
+              <a href="tel:1900 199 312" class="nav_link" style="">
+                <div class="box-contact">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0182 10.7235L11.9015 10.4818C11.3932 10.4235 10.8932 10.5985 10.5349 10.9568L9.00153 12.4901C6.6432 11.2901 4.70986 9.36514 3.50986 6.99847L5.05153 5.4568C5.40986 5.09847 5.58486 4.59847 5.52653 4.09014L5.28486 1.99014C5.18486 1.14847 4.47653 0.515137 3.62653 0.515137H2.18486C1.2432 0.515137 0.459865 1.29847 0.518198 2.24014C0.959865 9.3568 6.65153 15.0401 13.7599 15.4818C14.7015 15.5401 15.4849 14.7568 15.4849 13.8151V12.3735C15.4932 11.5318 14.8599 10.8235 14.0182 10.7235Z" fill="white"/>
+                    </svg>
+                  <span>1900 199 312</span>
+                </div>
+              </a>
+          </nav>
+          <!-- mobile -->
+          <div class="global__box-toggle d-flex d-md-none">
+            <label class="toggle__btn" for="toggleHeader">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 5.25H3C2.59 5.25 2.25 4.91 2.25 4.5C2.25 4.09 2.59 3.75 3 3.75H21C21.41 3.75 21.75 4.09 21.75 4.5C21.75 4.91 21.41 5.25 21 5.25Z"
+                  fill="#292D32" />
+                <path
+                  d="M21 10.25H3C2.59 10.25 2.25 9.91 2.25 9.5C2.25 9.09 2.59 8.75 3 8.75H21C21.41 8.75 21.75 9.09 21.75 9.5C21.75 9.91 21.41 10.25 21 10.25Z"
+                  fill="#292D32" />
+                <path
+                  d="M21 15.25H3C2.59 15.25 2.25 14.91 2.25 14.5C2.25 14.09 2.59 13.75 3 13.75H21C21.41 13.75 21.75 14.09 21.75 14.5C21.75 14.91 21.41 15.25 21 15.25Z"
+                  fill="#292D32" />
+                <path
+                  d="M21 20.25H3C2.59 20.25 2.25 19.91 2.25 19.5C2.25 19.09 2.59 18.75 3 18.75H21C21.41 18.75 21.75 19.09 21.75 19.5C21.75 19.91 21.41 20.25 21 20.25Z"
+                  fill="#292D32" />
+              </svg>
+            </label>
+            <input type="checkbox" class="toggle__input d-none" name="" id="toggleHeader" />
+            <!-- menu -->
+            <div class="toggle__list">
+              <div class="list__body">
+                <!--  -->
+                <div class="list__body-header">
+                  <img src="./../images/logo.svg" alt="" />
+                  <label for="toggleHeader" class="list__btn-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z"
+                        fill="white" />
+                      <path
+                        d="M9.16937 15.5799C8.97937 15.5799 8.78938 15.5099 8.63938 15.3599C8.34938 15.0699 8.34938 14.5899 8.63938 14.2999L14.2994 8.63986C14.5894 8.34986 15.0694 8.34986 15.3594 8.63986C15.6494 8.92986 15.6494 9.40986 15.3594 9.69986L9.69937 15.3599C9.55937 15.5099 9.35937 15.5799 9.16937 15.5799Z"
+                        fill="white" />
+                      <path
+                        d="M14.8294 15.5799C14.6394 15.5799 14.4494 15.5099 14.2994 15.3599L8.63938 9.69986C8.34938 9.40986 8.34938 8.92986 8.63938 8.63986C8.92937 8.34986 9.40937 8.34986 9.69937 8.63986L15.3594 14.2999C15.6494 14.5899 15.6494 15.0699 15.3594 15.3599C15.2094 15.5099 15.0194 15.5799 14.8294 15.5799Z"
+                        fill="white" />
+                    </svg>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <label class="mark" for="toggleHeader"></label>
+          </div>
+          <!--  -->
+        </div>
+        <!--  -->
+      </div>
+
+      <!--  -->
+    </div>
+    <!--  -->
+  </header>
+
+  <!--  -->
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./../lib/wow/wow.min.js"></script>
+  <script src="./../lib/easing/easing.min.js"></script>
+  <script src="./../lib/waypoints/waypoints.min.js"></script>
+  <script src="./../lib/counterup/counterup.min.js"></script>
+  <script src="./../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="./../lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="./../lib/lightbox/js/lightbox.min.js"></script>
+  <script src="./../vendor/bootstrap-4.6.1/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="./../vendor/slick/slick.min.js"></script>
+
+  <script src="./../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+.BannerSlide1 {
+  $heightImage: 600px;
+  width: 100%;
+  position: relative;
+  height: auto;
+  min-height: $heightImage;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    min-height: $heightImage;
+    &-boxfirst {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex: 4;
+    }
+    &-title {
+      padding-left: 15%;
+      padding-right: 15%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      /* or 120% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: $alwaysLightPrimary;
+    }
+    &-search {
+      display: flex;
+      justify-content: center;
+      margin-top: 48px;
+      $heightSearch: 64px;
+      .form {
+        width: 60%;
+        display: flex;
+        border-radius: calc($heightSearch / 2);
+        overflow: hidden;
+        // padding-left: 20px;
+        // background-color: $alwaysLightPrimary;
+        &__icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: $heightSearch;
+          background-color: $alwaysLightPrimary;
+          padding-left: 20px;
+        }
+        &__input {
+          flex: 1;
+          height: $heightSearch;
+          input {
+            height: $heightSearch;
+            outline: none;
+            border: none;
+            border-radius: unset;
+            box-shadow: unset;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #777777;
+          }
+        }
+        &__button {
+          button {
+            height: $heightSearch;
+            background-color: $Brainning;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 40px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $alwaysLightPrimary;
+            outline: none;
+            border: none;
+            border-radius: unset;
+            box-shadow: unset;
+          }
+        }
+      }
+    }
+    &-menu {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 45px;
+      &-box {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        // padding: 80px 0 40px 0;
+        .box {
+          &__item {
+            margin-top: 12px;
+            a {
+              text-decoration: none;
+            }
+            &-icon {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            &-text {
+              text-align: center;
+              margin-top: 18px;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 16px;
+              color: $alwaysLightPrimary;
+            }
+          }
+        }
+        .box__item:not(:last-child) {
+          margin-right: 48px;
+        }
+      }
+    }
+  }
+}
+
+.BannerSlide2 {
+  $heightImage: 320px;
+  width: 100%;
+  position: relative;
+  min-height: $heightImage;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  &__bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    &-title {
+      padding-top: 34px;
+      padding-left: 15%;
+      padding-right: 15%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      /* or 120% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: $alwaysLightPrimary;
+    }
+    &-desc {
+      padding-top: 8px;
+      padding-bottom: 190px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      /* Light / Funtion / alwaysLightPrimary */
+
+      color: $alwaysLightPrimary;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+  .BannerSlide1 {
+    $heightImage: 320px;
+    width: 100%;
+    position: relative;
+    height: auto;
+    min-height: $heightImage;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__bg {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__body {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      min-height: $heightImage;
+      &-boxfirst {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex: 4;
+      }
+      &-title {
+        padding-left: 0;
+        padding-right: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 40px;
+        padding-top: 60px;
+        /* or 120% */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $alwaysLightPrimary;
+      }
+      &-search {
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
+        $heightSearch: 40px;
+        .form {
+          width: 100%;
+          display: flex;
+          border-radius: calc($heightSearch / 2);
+          overflow: hidden;
+          // padding-left: 20px;
+          // background-color: $alwaysLightPrimary;
+          &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: $heightSearch;
+            background-color: $alwaysLightPrimary;
+            padding-left: 20px;
+          }
+          &__input {
+            flex: 1;
+            height: $heightSearch;
+            input {
+              height: $heightSearch;
+              outline: none;
+              border: none;
+              border-radius: unset;
+              box-shadow: unset;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              color: #777777;
+            }
+          }
+          &__button {
+            button {
+              height: $heightSearch;
+              background-color: $Brainning;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 20px 10px;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              color: $alwaysLightPrimary;
+              outline: none;
+              border: none;
+              border-radius: unset;
+              box-shadow: unset;
+            }
+          }
+        }
+      }
+      &-menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 45px;
+        &-box {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          justify-content: center;
+          // padding: 80px 0 40px 0;
+          .box {
+            &__item {
+              margin-top: 12px;
+              a {
+                text-decoration: none;
+              }
+              &-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+              &-text {
+                text-align: center;
+                margin-top: 18px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                color: $alwaysLightPrimary;
+              }
+            }
+          }
+          .box__item:not(:last-child) {
+            margin-right: 48px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

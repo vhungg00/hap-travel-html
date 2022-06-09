@@ -1,0 +1,115 @@
+footer.footer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .footer {
+        &__box {
+            .main__image {
+                margin-bottom: 10px;
+                img {
+                    width: auto;
+                    height: 64px;
+                    object-fit: cover;
+                }
+            }
+            background-color: $primary-color;
+            position: relative;
+            width: 100%;
+            // background: url("./../../images/bg_footer.jpg") center center/cover
+            //     no-repeat;
+            padding: 60px 0 60px 0;
+            color: #fff;
+            // background-repeat: no-repeat !important;
+            // background-position: right top !important;
+            font-size: 14px;
+            &-main {
+                z-index: 4;
+                
+                .main__list {
+                    list-style: none;
+                }
+                .main__item{
+                    padding: 10px 0;
+                    line-height: 20px;
+                    &-link {
+                        color: $white-color;
+                        text-decoration: none;
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .main__social {
+                    display: flex;
+                    a{
+                        background-color: $red-color;
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        margin-right: 12px;
+                    }
+                }
+                
+            }
+
+            &-item {
+                z-index: 4;
+                .body__list {
+                    list-style: none;
+                    .body__list-item {
+                        padding: 10px 0;
+                        line-height: 20px;
+                        &-link {
+                            text-decoration: none;
+                            color: $white-color;
+                        }
+                    }
+                }
+                .image {
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        height: 199px;
+                    }
+                }
+                
+            }
+        }
+        &__bottom {
+            background-color: #000000;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            color: $text-color;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    // .topbar {
+    //   &__box {
+    //   }
+    // }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+}
+
+// Medium devices (tablets, less than 992px)
+    @media (max-width: 991px) {
+        //   .container {
+        //     width: 750px;
+        //   }
+    }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

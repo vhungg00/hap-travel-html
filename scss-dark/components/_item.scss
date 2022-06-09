@@ -1,0 +1,1107 @@
+.ItemCustom {
+  &__box {
+    background-color: $bgPrimary;
+
+    position: relative;
+    box-shadow: 0px 2px 6px $shadow;
+    border-radius: 8px;
+    border: 1px solid $linePrimary;
+    overflow: hidden;
+    &-header {
+      .image {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        padding-top: 62%;
+        overflow: hidden;
+        aspect-ratio: 100/62;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 30%;
+          left: 0;
+          right: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.834375) 27.6%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .statusLeft {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        z-index: 3;
+        padding: 8px;
+        background: linear-gradient(90deg, #ff5c00 0%, #ff0000 100%);
+        border-radius: 0px 200px 200px 0px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        color: $alwaysLightPrimary;
+      }
+      .statusRight2,
+      .statusRight {
+        position: absolute;
+        top: 30px;
+        right: 8px;
+        z-index: 3;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        background: #da21a6;
+        color: $alwaysLightPrimary;
+      }
+      .statusRight2 {
+        background: #03a900;
+      }
+    }
+    &-body {
+      padding: 16px 12px;
+      .title {
+        a {
+          transition: all 0.2s;
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* or 150% */
+
+          color: $contentPrimary;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+
+          &:hover {
+            color: $Brainning;
+          }
+        }
+      }
+      .price {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &__old {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          text-decoration-line: line-through;
+
+          /* Text / Second */
+
+          color: $contentSecondary;
+        }
+        &__new {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 28px;
+          /* identical to box height, or 140% */
+
+          /* Light / Funtion / Brand */
+
+          color: $Brainning;
+          margin-right: 10px;
+        }
+      }
+      .button {
+        margin-top: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        &__register {
+          flex: 1;
+          .btn {
+            background: $accentPrimary;
+            border-radius: 8px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: $alwaysLightPrimary;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+        &__addToCart {
+          margin-left: 24px;
+          .btn {
+            width: 56px;
+            height: 40px;
+            background: $bgPrimary;
+            /* Light / accent / Primary */
+
+            border: 1px solid $accentPrimary;
+            box-sizing: border-box;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ItemCustom2 {
+  &__box {
+    position: relative;
+    box-shadow: 0px 2px 6px $shadow;
+    border-radius: 8px;
+    border: 1px solid $contentTertiary;
+    overflow: hidden;
+    &-header {
+      .image {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        padding-top: 90%;
+        overflow: hidden;
+        aspect-ratio: 100/90;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 10%;
+          left: 0;
+          right: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.834375) 27.6%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .statusLeft {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        z-index: 3;
+        padding: 8px;
+        background: linear-gradient(90deg, #ff5c00 0%, #ff0000 100%);
+        border-radius: 0px 200px 200px 0px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        color: $alwaysLightPrimary;
+      }
+      .statusRight2,
+      .statusRight {
+        position: absolute;
+        top: 30px;
+        right: 8px;
+        z-index: 3;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        background: #da21a6;
+        color: $alwaysLightPrimary;
+      }
+      .statusRight2 {
+        background: #03a900;
+      }
+    }
+    &-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      height: 100%;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        height: 30%;
+        width: 100%;
+        padding: 40px 24px 16px;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.81) 20.83%,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+      }
+      .body__container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        // height: 100%;
+        padding: 20px 24px;
+        z-index: 2;
+      }
+      .body__title {
+        display: flex;
+        flex-wrap: wrap;
+        .title {
+          flex: 1;
+          a {
+            transition: all 0.2s;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            /* or 150% */
+
+            color: $alwaysLightPrimary;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            &:hover {
+              color: $Brainning;
+            }
+          }
+        }
+        .button {
+          flex-wrap: wrap;
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+
+          &__register {
+            margin-left: 20px;
+            flex: 1;
+            .btn {
+              transition: all 0.2s;
+              background: $accentPrimary;
+              border-radius: 8px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: $alwaysLightPrimary;
+              height: 48px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+          &__addToCart {
+            margin-left: 12px;
+            .btn {
+              width: 56px;
+              height: 48px;
+              background: $bgPrimary;
+              /* Light / accent / Primary */
+
+              border: 1px solid $accentPrimary;
+              box-sizing: border-box;
+              border-radius: 8px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+
+      .price {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &__old {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 143% */
+
+          text-decoration-line: line-through;
+
+          /* Text / Second */
+
+          color: $contentSecondary;
+        }
+        &__new {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          /* identical to box height, or 140% */
+
+          /* Light / Funtion / Brand */
+
+          color: $Brainning;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.ItemCustom3 {
+}
+
+.BoxItem {
+  $paddingGlobalTop: 52px;
+  $paddingGlobalBottom: 32px;
+  padding-top: $paddingGlobalTop;
+  padding-bottom: $paddingGlobalBottom;
+  background-color: $bgPrimary;
+
+  &__box {
+  }
+  &__header {
+    // background-color: red;
+    margin-bottom: 32px;
+    &-left {
+      display: flex;
+      align-items: center;
+      .left {
+        &__icon {
+          width: auto;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &__text {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          color: $contentPrimary;
+          margin-left: 12px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .right {
+        &__item:not(:last-child) {
+          margin-right: 32px;
+        }
+        &__item {
+          a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $contentPrimary;
+            text-decoration: none;
+            &:hover {
+              color: $Brainning;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__body {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      .item {
+        &__box {
+          &.first {
+            order: 1;
+          }
+          &.second {
+            order: 2;
+          }
+          &-child {
+            .ItemCustom__box,
+            .ItemCustom2__box {
+              margin-bottom: 24px;
+            }
+            // position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+.BoxItem2 {
+  $paddingGlobalTop: 52px;
+  $paddingGlobalBottom: 32px;
+  padding-top: $paddingGlobalTop;
+  padding-bottom: $paddingGlobalBottom;
+  background-color: $bgPrimary;
+  // &__box {
+  // }
+  &__header {
+    // background-color: red;
+    margin-bottom: 32px;
+    &-left {
+      display: flex;
+      align-items: center;
+      .left {
+        &__icon {
+          width: auto;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &__text {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          color: $contentPrimary;
+          margin-left: 12px;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .right {
+        &__item:not(:last-child) {
+          margin-right: 32px;
+        }
+        &__item {
+          a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $contentPrimary;
+            text-decoration: none;
+            &:hover {
+              color: $Brainning;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__body1 {
+    &-item {
+      // background-color: red;
+      display: flex;
+      flex-direction: column;
+      .ListProduct {
+        &__item {
+          .ItemCustom__box,
+          .ItemCustom2__box {
+            margin-bottom: 24px;
+          }
+          // position: relative;
+        }
+      }
+    }
+  }
+  &__body1,
+  &__body2 {
+    &-item {
+      // background-color: red;
+      display: flex;
+      flex-direction: column;
+      .ListProduct {
+        &__item {
+          .ItemCustom__box,
+          .ItemCustom2__box {
+            margin-bottom: 24px;
+          }
+          // position: relative;
+        }
+      }
+    }
+  }
+
+  &__body2 {
+    &-item {
+      .ads {
+        width: 100%;
+        margin-bottom: 24px;
+        .image {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.BoxItem3 {
+  background: $bgTertiary;
+  border: 1px solid $contentTertiary;
+  border-radius: 8px;
+  &__header {
+    border-bottom: 1px solid $contentTertiary;
+    padding: 10px 12px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Light/content/Secondary */
+
+    color: $contentSecondary;
+  }
+  &__body {
+    &-item {
+      display: flex;
+      padding: 16px 12px;
+      // flex-wrap: wrap;
+      overflow: hidden;
+      &:not(:last-child) {
+        border-bottom: 1px solid $contentTertiary;
+      }
+      .item__image {
+        min-width: 64px;
+        .image {
+          position: relative;
+          width: 100%;
+          padding-top: 100%;
+          overflow: hidden;
+          aspect-ratio: 100/100;
+          border-radius: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+          }
+        }
+      }
+      .item__info {
+        margin-left: 8px;
+        flex: 1;
+        display: flex;
+        border-radius: 8px;
+        flex-direction: column;
+        &-label {
+          a {
+            transition: all 0.2s;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            /* or 143% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-decoration: none;
+            &:hover {
+              color: $Brainning;
+            }
+          }
+        }
+        &-price {
+          padding-top: 4px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          .old {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height, or 133% */
+
+            text-decoration-line: line-through;
+
+            /* Light/content/Secondary */
+
+            color: $contentSecondary;
+          }
+          .new {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            /* Light / Funtion / Brand */
+
+            color: $Brainning;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.Ads1 {
+  border: 1px solid $contentTertiary;
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+  .image {
+    position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+.BoxItem4 {
+  padding: 20px 16px;
+  background-color: $bgPrimary;
+  &__header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $contentSecondary;
+    padding-bottom: 12px;
+  }
+  &__body {
+    &-item {
+      border: 1px solid $contentTertiary;
+      border-radius: 8px;
+      width: 176px !important;
+      margin: 0 8px;
+      .item__image {
+        min-width: 64px;
+        .image {
+          border-radius: 8px 8px 0 0;
+          position: relative;
+          width: 100%;
+          padding-top: 62%;
+          overflow: hidden;
+          aspect-ratio: 100/62;
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+      .item__info {
+        overflow: hidden;
+        padding: 8px 12px;
+        flex: 1;
+        display: flex;
+        border-radius: 8px;
+        flex-direction: column;
+        &-label {
+          a {
+            transition: all 0.2s;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            /* or 143% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-decoration: none;
+            &:hover {
+              color: $Brainning;
+            }
+          }
+        }
+        &-price {
+          padding-top: 4px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          .old {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height, or 133% */
+
+            text-decoration-line: line-through;
+
+            /* Light/content/Secondary */
+
+            color: $contentSecondary;
+          }
+          .new {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            /* Light / Funtion / Brand */
+
+            color: $Brainning;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.BoxItem5 {
+  background: $semiOrange;
+  border: 1px solid $criticalPrimary;
+  border-radius: 8px;
+  padding: 16px;
+
+  &__header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Light/content/Secondary */
+
+    color: $AlwaysContentPrimary;
+  }
+  &__body {
+    &-item {
+      display: flex;
+      padding: 12px 0 0 0;
+      // flex-wrap: wrap;
+      overflow: hidden;
+
+      .item__image {
+        margin-right: 12px;
+      }
+      .item__info {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* or 143% */
+
+        /* Light/content/Secondary */
+
+        color: $contentSecondary;
+      }
+    }
+  }
+}
+.BoxItem6 {
+  background: $bgTertiary;
+  border: 1px solid $contentTertiary;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border-radius: 8px;
+
+  &__header {
+    background: $bgSecondary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Light/content/Secondary */
+
+    color: $contentSecondary;
+    padding: 10px 12px;
+    border-bottom: 1px solid $contentTertiary;
+  }
+  &__body {
+    &-item {
+      display: flex;
+      padding: 0 12px;
+      // flex-wrap: wrap;
+      overflow: hidden;
+      a {
+        cursor: pointer;
+        &:hover {
+          color: $Brainning;
+        }
+      }
+      .item__info {
+        width: 100%;
+        padding: 12px 0;
+
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        /* Light/content/Primary */
+
+        color: $contentPrimary;
+      }
+      &:not(:last-child) .item__info {
+        border-bottom: 1px solid $contentTertiary;
+      }
+    }
+  }
+}
+
+.BoxItem7 {
+  $paddingGlobalTop: 96px;
+  $paddingGlobalBottom: 48px;
+  padding-top: $paddingGlobalTop;
+  padding-bottom: $paddingGlobalBottom;
+  background-color: $bgPrimary;
+
+  &__header {
+    // background-color: red;
+    margin-bottom: 32px;
+    &-left {
+      display: flex;
+      align-items: center;
+      .left {
+        &__icon {
+          width: auto;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &__text {
+          margin-left: 12px;
+          &-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            /* Light / Funtion / Brand */
+
+            color: $Brainning;
+          }
+          &-content {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+
+            color: $contentPrimary;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .right {
+        &__item:not(:last-child) {
+          margin-right: 32px;
+        }
+        &__item {
+          a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $contentPrimary;
+            text-decoration: none;
+            &:hover {
+              color: $Brainning;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__slider {
+    margin-left: -100px;
+    &-item {
+      // width: calc(100% / 3);
+
+      .item__image {
+        width: 388px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .image {
+        position: relative;
+        width: 100%;
+        padding-top: 76%;
+        overflow: hidden;
+        aspect-ratio: 76/100;
+        border-radius: 8px;
+        img {
+          border-radius: 8px;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+  &__list {
+    margin-top: 24px;
+    .item {
+      &__image {
+        .image {
+          position: relative;
+          width: 100%;
+          padding-top: 69%;
+          overflow: hidden;
+          aspect-ratio: 100/69;
+          border-radius: 8px;
+          img {
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+      &__title {
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        color: $contentPrimary;
+      }
+      &__desc {
+        margin-top: 4px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $contentSecondary;
+      }
+      &__btn {
+        margin-top: 24px;
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
+          border: 1px solid $accentPrimary;
+          padding: 10px 12px;
+          border-radius: 8px;
+
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          /* Light / Funtion / accentPrimary */
+
+          color: $accentPrimary;
+        }
+      }
+    }
+  }
+}

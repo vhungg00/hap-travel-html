@@ -1,0 +1,34 @@
+.Homepage {
+  // min-height: 200vh;
+}
+.HomePage2 {
+}
+.HomePage2__banner4 {
+  background-color: $bgTertiary;
+  padding-bottom: 32px;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .Homepage {
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+  .Homepage {
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+  .Homepage {
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

@@ -1,0 +1,35 @@
+.ProductList {
+  background-color: $bgTertiary;
+  padding-bottom: 24px;
+  .pagehero {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &__left {
+  }
+  &__right {
+    &-header {
+      padding-bottom: 16px;
+      /* Light/content/Tertiary */
+
+      border-bottom: 1px solid $contentTertiary;
+      .label {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        /* identical to box height, or 133% */
+
+        /* Light/content/Primary */
+
+        color: $contentPrimary;
+      }
+    }
+
+    &-body {
+      .body__item {
+        padding-top: 24px;
+      }
+    }
+  }
+}

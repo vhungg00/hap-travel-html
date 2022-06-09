@@ -1,0 +1,335 @@
+.ProductDetail {
+  background-color: $bgTertiary;
+  .pagehero {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  padding-bottom: 30px;
+  &__content {
+    &-info {
+      .info {
+        &__left {
+          .image {
+            border-radius: 8px;
+            position: relative;
+            width: 100%;
+            padding-top: 87%;
+            overflow: hidden;
+            aspect-ratio: 100/87;
+            img {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+        }
+        &__right {
+          &-box {
+            overflow: hidden;
+            background: $bgPrimary;
+            border-radius: 8px;
+            padding: 16px 16px 0 16px;
+          }
+          &-label {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            /* or 143% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+          }
+          &-price {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .old {
+              margin-top: 20px;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 28px;
+              /* identical to box height, or 133% */
+
+              text-decoration-line: line-through;
+
+              /* Light/content/Secondary */
+
+              color: $contentSecondary;
+            }
+            .new {
+              margin-top: 20px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 40px;
+              line-height: 48px;
+              /* identical to box height, or 150% */
+
+              /* Light / Funtion / Brand */
+
+              color: $Brainning;
+              margin-right: 12px;
+            }
+          }
+          &-shortDesc {
+            margin-top: 20px;
+            .shortDesc__label {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              /* identical to box height, or 150% */
+
+              /* Light/content/Primary */
+
+              color: $contentPrimary;
+            }
+            .shortDesc__text {
+              margin-top: 8px;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              /* or 143% */
+
+              /* Light/content/Secondary */
+
+              color: $contentSecondary;
+            }
+          }
+          &-table {
+            margin-top: 8px;
+
+            .table__item {
+              padding: 10px 16px;
+              display: flex;
+              background-color: $bgPrimary;
+              &.bold {
+                background-color: $bgTertiary;
+              }
+              &-label {
+                width: 30%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                /* identical to box height, or 143% */
+
+                /* Light/content/Secondary */
+
+                color: $contentSecondary;
+              }
+              &-text {
+                width: 70%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                /* identical to box height, or 143% */
+
+                /* Light/content/Primary */
+
+                color: $contentPrimary;
+              }
+            }
+          }
+          &-btn {
+            display: flex;
+            padding-bottom: 20px;
+            /* Light/content/Tertiary */
+
+            border-bottom: 1px solid $contentTertiary;
+
+            .quantity-custom {
+              margin-top: 20px;
+              margin-right: 12px;
+            }
+            .register {
+              margin-top: 20px;
+              flex: 1;
+              button {
+                width: 100%;
+                /* Light / Funtion / accentPrimary */
+
+                background: $accentPrimary;
+                border-radius: 8px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                /* identical to box height, or 150% */
+
+                text-align: center;
+
+                /* Light / Funtion / alwaysLightPrimary */
+
+                color: $alwaysLightPrimary;
+                height: 44px;
+                outline: none;
+                box-shadow: none;
+                border: unset;
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-bot {
+      .question__main .accordion {
+        border-radius: unset;
+      }
+    }
+    // background-color: ;
+  }
+}
+.DetailV2 {
+  background-color: $bgTertiary;
+  padding-bottom: 45px;
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5% 0;
+    margin-top: -300px;
+    &-box {
+      border-radius: 4px;
+      background-color: $bgPrimary;
+      padding: 32px 40px 0;
+      border: 1px solid $lineSecondary;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      .box {
+        &__image {
+          .image {
+            position: relative;
+            width: 100%;
+            padding-top: 47%;
+            overflow: hidden;
+            aspect-ratio: 100/47;
+            border-radius: 8px;
+            img {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 8px;
+            }
+          }
+        }
+        &__title {
+          padding-top: 24px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          color: $contentPrimary;
+        }
+        &__desc {
+          margin-top: 8px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: $contentSecondary;
+          padding-bottom: 24px;
+        }
+        &__price {
+          padding-bottom: 16px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          &-label {
+            margin-top: 16px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+            margin-right: 12px;
+          }
+          &-new {
+            margin-top: 16px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            /* identical to box height, or 120% */
+
+            /* Light / Funtion / accentPrimary */
+
+            color: $accentPrimary;
+            margin-right: 12px;
+          }
+          &-old {
+            margin-top: 16px;
+            flex: 1;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            text-decoration-line: line-through;
+
+            /* Light/content/Secondary */
+
+            color: $contentSecondary;
+          }
+          &-btn {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            $heightSearch: 48px;
+            &:hover {
+              opacity: 0.8;
+            }
+            a {
+              text-decoration: none;
+              min-height: $heightSearch;
+              background: $Brainning;
+              border-radius: 12px;
+              display: flex;
+              padding: 0 64px;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .btn-icon {
+              margin-right: 8px;
+            }
+            .btn-text {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              /* identical to box height, or 150% */
+              color: $alwaysLightPrimary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

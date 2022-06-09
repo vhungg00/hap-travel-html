@@ -1,0 +1,100 @@
+.question {
+  &__box {
+    padding: 48px 0;
+    height: auto;
+    background: url(../../images/white-concrete-wall\ 2.png);
+    background-size: cover;
+    object-fit: cover;
+  }
+  &__main {
+    // width: 924px;
+    // margin: 0 auto;
+    width: 100%;
+    &-heading {
+      color: $alwaysDarkPrimary;
+      font-weight: 700;
+      text-align: center;
+      line-height: 32px;
+      font-size: 24px;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .accordion {
+      background: $bgPrimary;
+      border-radius: 12px;
+      overflow: hidden;
+      .card {
+        border: unset;
+        &:not(:last-child) {
+          /* Light/content/Tertiary */
+
+          border-bottom: 1px solid $contentTertiary;
+        }
+      }
+      .card-header {
+        overflow: hidden;
+        background-color: $bgPrimary;
+        border: unset;
+
+        button {
+          background: none;
+
+          .text {
+            margin-left: 8px;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            /* Light/content/Primary */
+
+            color: $contentPrimary;
+          }
+          .plus {
+            display: none;
+          }
+          .minus {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+          }
+          &.collapsed {
+            .plus {
+              justify-content: center;
+              display: flex;
+              align-items: center;
+            }
+            .minus {
+              display: none;
+            }
+          }
+        }
+      }
+      .card-body {
+        padding: 5px 24px 12px 24px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        background-color: $bgPrimary;
+        color: $contentSecondary;
+      }
+    }
+
+    &-box {
+      display: flex;
+    }
+  }
+
+  .btn:focus {
+    box-shadow: none;
+  }
+  .btn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
