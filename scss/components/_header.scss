@@ -43,15 +43,11 @@
           &-nav {
             display: flex;
             align-items: center;
+            gap: 20px;
             a {
-              &:hover {
-                opacity: 0.8;
-                transition: ease-in .2s;
-              }
               line-height: 64px;
               font-size: 14px;
               font-weight: 500;
-              padding-left: 20px;
               color: $contentPrimary;
               &:last-child {
                 text-decoration: none;
@@ -292,6 +288,34 @@
   }
 }
 
+@media (hover: hover) {
+  .global__box-nav {
+    a {
+      position: relative;
+      transition: all 0.2s linear;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        left: auto;
+        right: 0;
+        width: 0;
+        height: 3px;
+        background-color: $bgSecondary;
+        transition: all 0.2s linear;
+        transition: all 0.2s linear;
+      }
+      &:not(:last-child):hover {
+        color: $bgSecondary;
+        &:after {
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+}
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
 }
